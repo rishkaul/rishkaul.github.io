@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Kaul | Senior Software Engineer at Amazon Elastic Container Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Rishabh Kaul - Senior Software Engineer at Amazon Elastic Container Service">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#666666',
+                        accent: '#0066cc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-primary font-sans">
+    <button class="mobile-menu-button md:hidden fixed top-4 left-4 z-50 p-2 bg-gray-50 rounded-lg">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold mb-2">Rishabh Kaul</h1>
+                <p class="text-secondary text-sm">Senior Software Engineer at Amazon ECS</p>
+            </div>
+
+            <nav class="space-y-2">
+                <a href="#bio" class="block py-2 text-secondary hover:text-accent">Bio</a>
+                <a href="#projects" class="block py-2 text-secondary hover:text-accent">Projects</a>
+            </nav>
+
+            <div class="mt-8 space-y-4">
+                <a href="https://github.com/rishkaul" target="_blank" class="text-secondary hover:text-accent text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rishabh-kaul-98597536/" target="_blank"
+                    class="text-secondary hover:text-accent text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="bio" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Bio</h2>
+                <p class="mb-4">I'm a software engineer with 9 years of experience building scalable, reliable systems.
+                    I currently work at Amazon Web Services (AWS) on the Amazon ECS team, where I own and lead
+                    development of ECS Service Connect—a feature that simplifies service discovery and communication in
+                    containerized applications.</p>
+                <p class="mb-4">My work centers around containers, with a strong focus on container orchestration and
+                    application networking. I'm passionate about solving hard distributed systems problems and designing
+                    tools that make infrastructure seamless for developers.</p>
+                <p class="text-secondary">My expertise spans API and database design, large-scale distributed
+                    architectures, and building high availability systems that power production workloads.</p>
+            </section>
+
+            <section id="projects" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Projects</h2>
+                <div class="space-y-8">
+                    <div class="project">
+                        <h3 class="text-xl font-semibold mb-2">Amazon ECS Service Connect</h3>
+                        <p class="text-secondary mb-2">Played a key role in developing Service Connect, a new networking
+                            capability that simplifies service discovery and connectivity for Amazon ECS.</p>
+                        <a href="https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-ecs-service-connect/"
+                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="text-xl font-semibold mb-2">Amazon GuardDuty ECS Runtime Monitoring</h3>
+                        <p class="text-secondary mb-2">Led the effort to develop runtime threat detection for Amazon ECS
+                            workloads, including serverless container workloads running on AWS Fargate.</p>
+                        <div class="space-x-4">
+                            <a href="https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-guardduty-ecs-runtime-monitoring-fargate/"
+                                target="_blank" class="text-accent hover:underline">Learn More →</a>
+                            <a href="https://www.youtube.com/watch?v=TcpEUnDM-4I" target="_blank"
+                                class="text-accent hover:underline">Watch Video →</a>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="text-xl font-semibold mb-2">Amazon ECS Fargate EBS Integration</h3>
+                        <p class="text-secondary mb-2">Played a key role in implementing EBS volume support for Amazon
+                            ECS tasks running on AWS Fargate.</p>
+                        <a href="https://aws.amazon.com/about-aws/whats-new/2024/01/amazon-ecs-fargate-integrate-ebs/"
+                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="text-xl font-semibold mb-2">Amazon VPC Lattice ECS Integration</h3>
+                        <p class="text-secondary mb-2">Led the effort to integrate Amazon ECS with VPC Lattice,
+                            enhancing service-to-service communication and network security.</p>
+                        <a href="https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-vpc-lattice-elastic-container-service/"
+                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const sidebar = document.querySelector('.sidebar');
+        const menuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 768 &&
+                !sidebar.contains(e.target) &&
+                !mobileMenuButton.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>
