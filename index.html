@@ -61,7 +61,7 @@
                     class="block py-2 text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent">Education</a>
             </nav>
 
-            <div class="mt-8 space-y-4">
+            <div class="mt-8 flex space-x-4">
                 <a href="https://github.com/rishkaul" target="_blank"
                     class="text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent text-2xl">
                     <i class="fab fa-github"></i>
@@ -164,8 +164,8 @@
             localStorage.setItem('theme', theme);
         }
 
-        // Initialize theme
-        const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+        // Initialize theme - default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
         setTheme(savedTheme);
 
         // Toggle theme on button click
