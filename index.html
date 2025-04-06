@@ -11,12 +11,14 @@
     <meta name="description" content="Rishabh Kaul - Senior Software Engineer at Amazon Elastic Container Service">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         primary: '#1a1a1a',
                         secondary: '#666666',
-                        accent: '#0066cc',
+                        accent: '#2563eb',
+                        'dark-accent': '#60a5fa',
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -27,8 +29,15 @@
     </script>
 </head>
 
-<body class="bg-white text-primary font-sans">
-    <button class="mobile-menu-button md:hidden fixed top-4 left-4 z-50 p-2 bg-gray-50 rounded-lg">
+<body class="bg-white text-primary font-sans dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+            <i class="fas fa-sun dark:hidden"></i>
+            <i class="fas fa-moon hidden dark:block"></i>
+        </button>
+    </div>
+
+    <button class="mobile-menu-button md:hidden fixed top-4 left-4 z-50 p-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
         <i class="fas fa-bars"></i>
     </button>
 
@@ -36,21 +45,29 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="mb-8">
+                <div class="w-24 h-24 rounded-full overflow-hidden mb-4 mx-auto">
+                    <img src="IMG-20190903-WA0009.jpg" alt="Rishabh Kaul" class="w-full h-full object-cover">
+                </div>
                 <h1 class="text-2xl font-bold mb-2">Rishabh Kaul</h1>
                 <p class="text-secondary text-sm">Senior Software Engineer at Amazon ECS</p>
             </div>
 
             <nav class="space-y-2">
-                <a href="#bio" class="block py-2 text-secondary hover:text-accent">Bio</a>
-                <a href="#projects" class="block py-2 text-secondary hover:text-accent">Projects</a>
+                <a href="#bio"
+                    class="block py-2 text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent">Bio</a>
+                <a href="#projects"
+                    class="block py-2 text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent">Projects</a>
+                <a href="#education"
+                    class="block py-2 text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent">Education</a>
             </nav>
 
             <div class="mt-8 space-y-4">
-                <a href="https://github.com/rishkaul" target="_blank" class="text-secondary hover:text-accent text-2xl">
+                <a href="https://github.com/rishkaul" target="_blank"
+                    class="text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent text-2xl">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/rishabh-kaul-98597536/" target="_blank"
-                    class="text-secondary hover:text-accent text-2xl">
+                    class="text-secondary hover:text-accent dark:text-gray-400 dark:hover:text-dark-accent text-2xl">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
@@ -76,38 +93,61 @@
                 <div class="space-y-8">
                     <div class="project">
                         <h3 class="text-xl font-semibold mb-2">Amazon ECS Service Connect</h3>
-                        <p class="text-secondary mb-2">Played a key role in developing Service Connect, a new networking
-                            capability that simplifies service discovery and connectivity for Amazon ECS.</p>
+                        <p class="text-secondary dark:text-gray-400 mb-2">Played a key role in developing Service
+                            Connect, a new networking capability that simplifies service discovery and connectivity for
+                            Amazon ECS.</p>
                         <a href="https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-ecs-service-connect/"
-                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                            target="_blank"
+                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
+                            More →</a>
                     </div>
 
                     <div class="project">
                         <h3 class="text-xl font-semibold mb-2">Amazon GuardDuty ECS Runtime Monitoring</h3>
-                        <p class="text-secondary mb-2">Led the effort to develop runtime threat detection for Amazon ECS
-                            workloads, including serverless container workloads running on AWS Fargate.</p>
+                        <p class="text-secondary dark:text-gray-400 mb-2">Led the effort to develop runtime threat
+                            detection for Amazon ECS workloads, including serverless container workloads running on AWS
+                            Fargate.</p>
                         <div class="space-x-4">
                             <a href="https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-guardduty-ecs-runtime-monitoring-fargate/"
-                                target="_blank" class="text-accent hover:underline">Learn More →</a>
+                                target="_blank"
+                                class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
+                                More →</a>
                             <a href="https://www.youtube.com/watch?v=TcpEUnDM-4I" target="_blank"
-                                class="text-accent hover:underline">Watch Video →</a>
+                                class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Watch
+                                Video →</a>
                         </div>
                     </div>
 
                     <div class="project">
                         <h3 class="text-xl font-semibold mb-2">Amazon ECS Fargate EBS Integration</h3>
-                        <p class="text-secondary mb-2">Played a key role in implementing EBS volume support for Amazon
-                            ECS tasks running on AWS Fargate.</p>
+                        <p class="text-secondary dark:text-gray-400 mb-2">Played a key role in implementing EBS volume
+                            support for Amazon ECS tasks running on AWS Fargate.</p>
                         <a href="https://aws.amazon.com/about-aws/whats-new/2024/01/amazon-ecs-fargate-integrate-ebs/"
-                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                            target="_blank"
+                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
+                            More →</a>
                     </div>
 
                     <div class="project">
                         <h3 class="text-xl font-semibold mb-2">Amazon VPC Lattice ECS Integration</h3>
-                        <p class="text-secondary mb-2">Led the effort to integrate Amazon ECS with VPC Lattice,
-                            enhancing service-to-service communication and network security.</p>
+                        <p class="text-secondary dark:text-gray-400 mb-2">Led the effort to integrate Amazon ECS with
+                            VPC Lattice, enhancing service-to-service communication and network security.</p>
                         <a href="https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-vpc-lattice-elastic-container-service/"
-                            target="_blank" class="text-accent hover:underline">Learn More →</a>
+                            target="_blank"
+                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
+                            More →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4">Education</h2>
+                <div class="space-y-4">
+                    <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                        <h3 class="text-xl font-semibold mb-2">Birla Institute of Technology and Science, Pilani</h3>
+                        <p class="text-secondary dark:text-gray-400 mb-2">Bachelor of Engineering (Hons.) in Computer
+                            Science</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">2012 - 2016</p>
                     </div>
                 </div>
             </section>
@@ -115,6 +155,25 @@
     </div>
 
     <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function setTheme(theme) {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            localStorage.setItem('theme', theme);
+        }
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+        setTheme(savedTheme);
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+            setTheme(currentTheme);
+        });
+
         // Mobile menu toggle
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
         const sidebar = document.querySelector('.sidebar');
@@ -135,6 +194,17 @@
                 menuIcon.classList.remove('fa-times');
                 menuIcon.classList.add('fa-bars');
             }
+        });
+
+        // Close menu when clicking a link on mobile
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    sidebar.classList.remove('active');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
         });
     </script>
 </body>
