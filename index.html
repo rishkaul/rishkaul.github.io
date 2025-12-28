@@ -29,7 +29,7 @@
     </script>
 </head>
 
-<body class="bg-white text-primary font-sans dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+<body class="bg-white text-primary font-sans dark:bg-[#0a0a0a] dark:text-gray-100 transition-colors duration-200">
     <div class="fixed top-4 right-4 z-50">
         <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
             <i class="fas fa-sun dark:hidden"></i>
@@ -89,53 +89,95 @@
             </section>
 
             <section id="projects" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4">Projects</h2>
-                <div class="space-y-8">
-                    <div class="project">
-                        <h3 class="text-xl font-semibold mb-2">Amazon ECS Service Connect</h3>
-                        <p class="text-secondary dark:text-gray-400 mb-2">Played a key role in developing Service
-                            Connect, a new networking capability that simplifies service discovery and connectivity for
-                            Amazon ECS.</p>
-                        <a href="https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-ecs-service-connect/"
-                            target="_blank"
-                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
-                            More →</a>
-                    </div>
+                <h2 class="text-2xl font-bold mb-6">Projects</h2>
 
-                    <div class="project">
-                        <h3 class="text-xl font-semibold mb-2">Amazon GuardDuty ECS Runtime Monitoring</h3>
-                        <p class="text-secondary dark:text-gray-400 mb-2">Led the effort to develop runtime threat
-                            detection for Amazon ECS workloads, including serverless container workloads running on AWS
-                            Fargate.</p>
-                        <div class="space-x-4">
-                            <a href="https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-guardduty-ecs-runtime-monitoring-fargate/"
-                                target="_blank"
-                                class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
-                                More →</a>
-                            <a href="https://www.youtube.com/watch?v=TcpEUnDM-4I" target="_blank"
-                                class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Watch
-                                Video →</a>
+                <!-- Service Connectivity & Networking -->
+                <div class="project-category">
+                    <h3 class="category-title">Service Connectivity & Networking</h3>
+                    <div class="projects-grid">
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-ecs-service-connect-observability-envoy-access-logs/"
+                                    target="_blank">Service Connect Envoy Access Logs</a>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <p class="project-description">Per-request telemetry for end-to-end tracing and debugging.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-ecs-service-connect-cross-account-workloads/"
+                                    target="_blank">Service Connect Cross-Account</a>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <p class="project-description">Seamless communication between services across AWS accounts.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-vpc-lattice-elastic-container-service/"
+                                    target="_blank">VPC Lattice ECS Integration</a>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <p class="project-description">Enhanced service-to-service communication and network security.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2024/01/amazon-ecs-service-connect-automatic-traffic-encryption-tls-certificates/"
+                                    target="_blank">Service Connect Automatic TLS</a>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <p class="project-description">Automatic traffic encryption with AWS Private CA and certificate rotation.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-ecs-service-connect/"
+                                    target="_blank">Amazon ECS Service Connect</a>
+                                <span class="project-year">2022</span>
+                            </div>
+                            <p class="project-description">Simplified service discovery and connectivity for Amazon ECS workloads.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="project">
-                        <h3 class="text-xl font-semibold mb-2">Amazon ECS Fargate EBS Integration</h3>
-                        <p class="text-secondary dark:text-gray-400 mb-2">Played a key role in implementing EBS volume
-                            support for Amazon ECS tasks running on AWS Fargate.</p>
-                        <a href="https://aws.amazon.com/about-aws/whats-new/2024/01/amazon-ecs-fargate-integrate-ebs/"
-                            target="_blank"
-                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
-                            More →</a>
+                <!-- Deployment & Storage -->
+                <div class="project-category">
+                    <h3 class="category-title">Deployment & Storage</h3>
+                    <div class="projects-grid">
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2025/07/amazon-ecs-built-in-blue-green-deployments/"
+                                    target="_blank">Built-In Blue/Green Deployments</a>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <p class="project-description">Safer updates with lifecycle hooks and automatic rollback.</p>
+                        </div>
+
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2024/01/amazon-ecs-fargate-integrate-ebs/"
+                                    target="_blank">ECS Fargate EBS Integration</a>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <p class="project-description">Persistent storage for serverless container workloads.</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="project">
-                        <h3 class="text-xl font-semibold mb-2">Amazon VPC Lattice ECS Integration</h3>
-                        <p class="text-secondary dark:text-gray-400 mb-2">Led the effort to integrate Amazon ECS with
-                            VPC Lattice, enhancing service-to-service communication and network security.</p>
-                        <a href="https://aws.amazon.com/about-aws/whats-new/2024/11/amazon-vpc-lattice-elastic-container-service/"
-                            target="_blank"
-                            class="text-accent hover:text-accent/80 dark:text-dark-accent dark:hover:text-dark-accent/80">Learn
-                            More →</a>
+                <!-- Security -->
+                <div class="project-category">
+                    <h3 class="category-title">Security</h3>
+                    <div class="projects-grid">
+                        <div class="project">
+                            <div class="project-title">
+                                <a href="https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-guardduty-ecs-runtime-monitoring-fargate/"
+                                    target="_blank">GuardDuty ECS Runtime Monitoring</a>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <p class="project-description">Runtime threat detection for ECS and Fargate workloads.</p>
+                        </div>
                     </div>
                 </div>
             </section>
